@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Teste manual para ver se o CSS carrega */
+.teste {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+}
