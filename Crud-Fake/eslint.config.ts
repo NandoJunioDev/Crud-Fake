@@ -14,9 +14,40 @@ export default defineConfigWithVueTs(
     files: ['**/*.{ts,mts,tsx,vue}'],
   },
 
-  
+
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
   skipFormatting,
 )
+
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+    'vue/setup-compiler-macros': true, // Habilita o reconhecimento de macros como defineProps
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-essential',
+    '@vue/eslint-config-typescript/recommended', // Regras recomendadas para TS
+  ],
+  // O parser principal para analisar arquivos .vue
+  parser: 'vue-eslint-parser',
+
+  parserOptions: {
+    // O parser que será usado para o código DENTRO da tag <script>
+    // ESTA LINHA É A CHAVE DA SOLUÇÃO!
+    parser: '@typescript-eslint/parser',
+    ecmaVersion: 'latest', // Permite usar as features mais recentes do JS
+    sourceType: 'module',
+  },
+  plugins: [
+    'vue',
+    '@typescript-eslint',
+  ],
+  rules: {
+    // Aqui você pode adicionar ou sobrescrever regras
+    'no-unused-vars': 'warn',
+  },
+};
