@@ -8,12 +8,26 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    tailwindcss(), // Plugin do Tailwind v4
+    tailwindcss()
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    }
   },
-  // REMOVA qualquer configuração css/postcss daqui
+  optimizeDeps: {
+    exclude: [
+      'babel-plugin-macros',
+      '@fortawesome-internal-tools/fontawesome-icons/canonical',
+      '@fortawesome-internal-tools/fontawesome-icons/legacy',
+      'chart.js/auto',
+      'quill'
+    ],
+    include: [
+      'primevue/config',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/vue-fontawesome'
+    ]
+  }
 })
