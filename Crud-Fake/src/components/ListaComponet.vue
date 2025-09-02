@@ -7,9 +7,11 @@ import Row from 'primevue/row';                   // optional
 </script>
 
 <template>
-<DataTable class="bg-transparent" >
+<DataTable class="bg-transparent"  >
 
- <Column field="campo" header="Cabeçalho" sortable  style="min-width: 200px;"></Column>
+ <Column field="ID" header="ID" sortable  style="min-width: 50px;"></Column>
+ <Column field="Valor" header=" Valor" sortable style="min-width: 50px;"></Column>
+  <Column field="nome" header="Nome" sortable style="min-width: 50px;"></Column>
 
 
 
