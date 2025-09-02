@@ -58,7 +58,7 @@ const images = ref([
       <template #thumbnail="slotProps" class="rounded-4xl bg-transparent  " >
 
         <div class="p-2">
-          <div class="  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer">
+          <div class="  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer bg-transparent ">
             <img :src="slotProps.item.thumbnailImageSrc" alt=""   class="w-full h-16 md:h-20 object-cover transition-transform duration-300 group-hover:scale-110">
 
 
