@@ -7,7 +7,7 @@ import Row from 'primevue/row';                   // optional
 </script>
 
 <template>
-<DataTable class="bg-transparent"  >
+<DataTable  tableStyle="background: transparent !important;" class=" 0"    >
 
  <Column field="ID" header="ID" sortable  style="min-width: 50px;"></Column>
  <Column field="Valor" header=" Valor" sortable style="min-width: 50px;"></Column>

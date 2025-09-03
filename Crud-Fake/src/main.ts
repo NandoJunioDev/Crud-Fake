@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import "./assets/main.css"
-import Material from '@primevue/themes/material'
-import './style.css'
+import Lara from '@primevue/themes/lara'
+
 import PrimeVue from 'primevue/config'
 
 import 'primeicons/primeicons.css'
@@ -37,15 +37,17 @@ const app = createApp(App)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.use(PrimeVue, {
   theme: {
-    preset: Material ,
+    preset: Lara ,
     options: {
       prefix:'p',
-      darkModeSelector: '.dark',
+
       cssLayer: {
         name: 'primevue',
-        order: 'tailwind-base, primevue, tailwind-utilities'
-
+        order: 'app-styles, primevue, another-css-library'
     }
+
+
+
   }
 }
 })

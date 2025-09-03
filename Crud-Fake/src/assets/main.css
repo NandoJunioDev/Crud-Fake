@@ -1,8 +1,22 @@
 @import './base.css';
 @import "tailwindcss";
 @import "tailwindcss-primeui";
-@import url('primevue/resources/themes/lara-dark-purple/theme.css');
-@import url('primevue/resources/primevue.min.css');
-@import url('primeicons/primeicons.css');
+
+
+/* Nossa customização global para o tema do PrimeVue.
+   Isso remove o fundo branco dos componentes. */
+
+body{
+  background-color: aliceblue;
+}
+
+/* Para PrimeVue 4 com data attributes */
+
+
+
+
+
+
+
 
 

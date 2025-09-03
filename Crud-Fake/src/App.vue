@@ -20,13 +20,11 @@ const clickCount = ref(0)
 
 <template>
   <TopNavBar/>
-  <main>
+  <main class="flex flex-col justify-center my-5 mb-11 items-center gap-8 w-full   ">
     <MainComponet/>
+    <ListaComponet/>
   </main>
-  <aside>
-      <ListaComponet/>
 
-  </aside>
 
 
 
@@ -35,6 +33,7 @@ const clickCount = ref(0)
 
 
 <style scoped>
+
 </style>
 
 
