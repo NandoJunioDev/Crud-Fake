@@ -1,8 +1,12 @@
 @import './base.css';
 @import "tailwindcss";
 @import "tailwindcss-primeui";
-@import url('primevue/resources/themes/lara-dark-purple/theme.css');
-@import url('primevue/resources/primevue.min.css');
-@import url('primeicons/primeicons.css');
 
 
+:root {
+
+    --p-surface-card: transparent;
+}
+body .p-galleria-thumbnail-container {
+  background: transparent !important;
+}

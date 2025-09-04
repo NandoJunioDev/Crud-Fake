@@ -26,8 +26,8 @@ const images = ref([
 
 </script>
 
-<template>
-<main>
+<template >
+<main class="">
 
   <div class="flex justify-center items-center">
 
@@ -35,30 +35,30 @@ const images = ref([
     </h1>
   </div>
 
-  <div class="   "  >
+  <div class=" "  >
     <Galleria :value="images" :numVisible="2" :showThumbnails="true"
       :showIndicators="true" :circular="true"
       containerStyle="max-width: 500px; margin: 0 auto;"
 
       :autoPlay="true"
-      :transitionInterval="4000"  class="custom-galeria rounded-3xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-xl border border-white/20"  >
-      <template #item="slotProps">
+      :transitionInterval="4000"  class="custom-galeria rounded-3xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-xl bg-amber-400 border border-white/20"  >
+      <template #item="slotProps" class="bg-amber-700">
 
-        <div class="relative h-min rounded-4xl w-full  ">
+        <div class="relative h-min rounded-4xl w-full bg-amber-600  ">
           <img :src="slotProps.item.itemImageSrc" alt="" class="block w-full">
         </div>
 
-        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4 text-white  rounded-md shadow-md hover:opacity-75 transition-opacity duration-200 " >
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4 text-white  rounded-md shadow-md hover:opacity-75 transition-opacity duration-200  bg-amber-500" >
 
           <h3 class="text-lg font-bold">{{ slotProps.item.title }}</h3>
           <p class="text-sm">{{ slotProps.item.alt }}</p>
         </div>
 
       </template>
-      <template #thumbnail="slotProps" class="rounded-4xl bg-transparent  " >
+      <template #thumbnail="slotProps" class="rounded-4xl   bg-amber-400 " >
 
-        <div class="p-2">
-          <div class="  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer bg-transparent ">
+        <div class="p-2 bg-amber-800">
+          <div class="  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer bg-transparent  bg-amber-500">
             <img :src="slotProps.item.thumbnailImageSrc" alt=""   class="w-full h-16 md:h-20 object-cover transition-transform duration-300 group-hover:scale-110">
 
 

@@ -1,30 +1,23 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+
+// --- Estilos Globais ---
 import "./assets/main.css"
-import Material from '@primevue/themes/material'
-import './style.css'
+// import './style.css' // Mantenha se você criou este arquivo
+
+// --- Configuração do PrimeVue v4+ ---
 import PrimeVue from 'primevue/config'
+import Material from '@primevue/themes/material' // Importa o PRESET do tema Material
+import 'primeicons/primeicons.css'           // Importa os ícones do PrimeVue
 
-import 'primeicons/primeicons.css'
-
+// --- Configuração do Font Awesome ---
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
-  faUser,
-  faHeart,
-  faCoffee,
-  faSpinner,
-  faCheck,
-  faTimes,
-  faSave,
-  faTrash,
-  faEdit,
-  faPlus,
-  faMinus,
-  faSearch
+  faUser, faHeart, faCoffee, faSpinner, faCheck, faTimes,
+  faSave, faTrash, faEdit, faPlus, faMinus, faSearch, faHouse
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faTwitter,  } from '@fortawesome/free-brands-svg-icons'
-import { light } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 

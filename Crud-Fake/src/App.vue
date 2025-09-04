@@ -18,7 +18,7 @@ const clickCount = ref(0)
 
 </script>
 
-<template>
+<template clas>
   <TopNavBar/>
   <main>
     <MainComponet/>
@@ -35,6 +35,7 @@ const clickCount = ref(0)
 
 
 <style scoped>
+
 </style>
 
 
