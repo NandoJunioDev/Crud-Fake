@@ -30,15 +30,17 @@ const app = createApp(App)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.use(PrimeVue, {
   theme: {
-    preset: Material ,
+    preset: Lara ,
     options: {
       prefix:'p',
-      darkModeSelector: '.dark',
+
       cssLayer: {
         name: 'primevue',
-        order: 'tailwind-base, primevue, tailwind-utilities'
-
+        order: 'app-styles, primevue, another-css-library'
     }
+
+
+
   }
 }
 })

@@ -31,18 +31,24 @@ const images = ref([
 
   <div class="flex justify-center items-center">
 
-    <h1 class=" text-5xl font-bold line-clamp-2 font-mono "> Galeria De Fotos
+    <h1 class=" text-5xl font-bold line-clamp-2 font-mono text-amber-950"> Galeria De Fotos
     </h1>
   </div>
 
   <div class=" "  >
     <Galleria :value="images" :numVisible="2" :showThumbnails="true"
-      :showIndicators="true" :circular="true"
-      containerStyle="max-width: 500px; margin: 0 auto;"
+      :showIndicators="true" :circular="true "
+      containerStyle="max-width: 500px; margin: 0 auto; "
 
       :autoPlay="true"
+<<<<<<< HEAD
       :transitionInterval="4000"  class="custom-galeria rounded-3xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-xl bg-amber-400 border border-white/20"  >
       <template #item="slotProps" class="bg-amber-700">
+=======
+      :transitionInterval="4000"  class="custom-galeria rounded-3xl overflow-hidden shadow-2xl bg-slate-700 backdrop-blur-xl border border-white/20"
+        >
+      <template #item="slotProps">
+>>>>>>> refs/remotes/origin/main
 
         <div class="relative h-min rounded-4xl w-full bg-amber-600  ">
           <img :src="slotProps.item.itemImageSrc" alt="" class="block w-full">
@@ -55,10 +61,17 @@ const images = ref([
         </div>
 
       </template>
+<<<<<<< HEAD
       <template #thumbnail="slotProps" class="rounded-4xl   bg-amber-400 " >
 
         <div class="p-2 bg-amber-800">
           <div class="  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer bg-transparent  bg-amber-500">
+=======
+      <template #thumbnail="slotProps" class="rounded-4xl   " >
+
+        <div class="p-2 bg-amber-500 ">
+          <div class=" bg-amber-400  relative overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group cursor-pointer bg-transparent ">
+>>>>>>> refs/remotes/origin/main
             <img :src="slotProps.item.thumbnailImageSrc" alt=""   class="w-full h-16 md:h-20 object-cover transition-transform duration-300 group-hover:scale-110">
 
 
