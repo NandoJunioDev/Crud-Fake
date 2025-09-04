@@ -30,7 +30,7 @@ const app = createApp(App)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.use(PrimeVue, {
   theme: {
-    preset: Lara ,
+    preset: Material ,
     options: {
       prefix:'p',
 
