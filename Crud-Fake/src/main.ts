@@ -4,6 +4,7 @@ import App from './App.vue'
 // --- Estilos Globais ---
 import "./assets/main.css"
 // import './style.css' // Mantenha se você criou este arquivo
+import  FinancelloPreset from "@/theme/mytheme";
 
 // --- Configuração do PrimeVue v4+ ---
 import PrimeVue from 'primevue/config'
@@ -30,7 +31,7 @@ const app = createApp(App)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.use(PrimeVue, {
   theme: {
-    preset: Material ,
+    preset:  FinancelloPreset ,
     options: {
       prefix:'p',
 
