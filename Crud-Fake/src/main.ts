@@ -1,48 +1,26 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-// --- Estilos Globais ---
-import "./assets/main.css"
-// import './style.css' // Mantenha se você criou este arquivo
-import  FinancelloPreset from "@/theme/mytheme";
-
-// --- Configuração do PrimeVue v4+ ---
+import "@/assets/main.css"
+import FinancelloPreset from '@/theme/mytheme'
+// PrimeVue
 import PrimeVue from 'primevue/config'
-import Material from '@primevue/themes/material' // Importa o PRESET do tema Material
-import 'primeicons/primeicons.css'           // Importa os ícones do PrimeVue
+import Aura from '@primevue/themes/aura'
+import 'primeicons/primeicons.css'
 
-// --- Configuração do Font Awesome ---
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {
-  faUser, faHeart, faCoffee, faSpinner, faCheck, faTimes,
-  faSave, faTrash, faEdit, faPlus, faMinus, faSearch, faHouse
-} from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-
-
-
-library.add(
-  faUser, faHeart, faCoffee, faSpinner, faCheck, faTimes,
-  faSave, faTrash, faEdit, faPlus, faMinus, faSearch,
-  faGithub, faTwitter,faLinkedin
-)
 const app = createApp(App)
-app.component('FontAwesomeIcon', FontAwesomeIcon)
+console.log('Tema carregado:', FinancelloPreset) // Debug
 app.use(PrimeVue, {
   theme: {
-    preset:  FinancelloPreset ,
+    preset: FinancelloPreset,  // Seu tema personalizado
     options: {
-      prefix:'p',
-
+      prefix: 'p',
+      darkModeSelector: 'system',
       cssLayer: {
         name: 'primevue',
-        order: 'app-styles, primevue, another-css-library'
+        order: 'base, primevue, utilities'
+      }
     }
-
-
-
   }
-}
 })
+
 app.mount('#app')

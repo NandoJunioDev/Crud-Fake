@@ -26,6 +26,34 @@ const clickCount = ref(0)
   </main>
 
 
+  <div class="p-4">
+    <Button label="Teste" class="p-button" />
+    <Card>
+      <template #title>Teste do Tema</template>
+      <template #content>
+        Se as cores mudaram, o tema está funcionando!
+      </template>
+    </Card>
+  </div>
+
+  <Button
+      label="Se eu estou azul, o tema funciona!"
+      style="margin: 10px;"
+    />
+
+<div style="margin: 20px 0;">
+      <p>Teste abaixo (se aparecer algo estilizado, PrimeVue funciona):</p>
+      <!-- Usando tag direta para testar -->
+      <button class="p-button p-button-primary">
+        Botão PrimeVue Direto
+      </button>
+
+  </div>
+  <Button
+      label="SE EU ESTOU LARANJA, O TEMA FUNCIONA!"
+      severity="primary"
+      style="margin: 10px;"
+    />
 
 
 </template>

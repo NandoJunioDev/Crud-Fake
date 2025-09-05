@@ -1,15 +1,14 @@
 @import './base.css';
 @import "tailwindcss";
 @import "tailwindcss-primeui";
-<<<<<<< HEAD
-=======
+
 
 
 /* Nossa customização global para o tema do PrimeVue.
    Isso remove o fundo branco dos componentes. */
 
 body{
-  background-color: aliceblue;
+  background-color: rgb(73, 111, 144);
 }
 
 /* Para PrimeVue 4 com data attributes */
@@ -20,13 +19,6 @@ body{
 
 
 
->>>>>>> refs/remotes/origin/main
 
 
-:root {
 
-    --p-surface-card: transparent;
-}
-body .p-galleria-thumbnail-container {
-  background: transparent !important;
-}

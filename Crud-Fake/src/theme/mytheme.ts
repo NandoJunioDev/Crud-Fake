@@ -1,39 +1,31 @@
-import { primitive, semantic } from '@primeuix/themes/material/base'
-import Material from '@primevue/themes/material'
+import { definePreset } from '@primevue/themes';
+import Aura from '@primevue/themes/aura';
 
-const FinancelloPreset = {
-...Material,
-
- primitive:{
-
-  financello:{
-    '50':'#77BDD9',
-    '100':'#90AFBC',
-    '200':'#557370',
-    '300':'#F2B279',
-    '400':'#D59C6B',
-    '500':'#F29E6D',
-    '600':'#7E6FA8',
-    '700':'',
-    '800':'',
-    '900':'',
-    '950':'',
-
-  }
-
-
- },
- semantic:{
-  primary:'financello',
-  surface:{
-  '0':'#8C748B',
-  '50':'#3C5E73',
-  '100':'#F24C3D'
+const FinancelloPreset = definePreset(Aura, {
+  semantic: {
+    primary: {
+      50: '#eff6ff',
+      100: '#dbeafe',
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',
+      500: '#3b82f6', // Azul bem visível
+      600: '#2563eb',
+      700: '#1d4ed8',
+      800: '#1e40af',
+      900: '#1e3a8a',
+      950: '#172554'
+    },
+    surface:{
+      0:'#3b82f6',
+      50:"#eff6ff",
+      100:'#3b82f6'
+    },
+    text: {
+          color: '#1f2937'         // Texto escuro (legível no fundo branco)
+        }
 
   }
+});
 
- }
-
-}
-
-export default FinancelloPreset
+export default FinancelloPreset;
