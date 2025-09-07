@@ -1,31 +1,64 @@
+import { primitive } from '@primeuix/themes/aura/base';
 import { definePreset } from '@primevue/themes';
 import Aura from '@primevue/themes/aura';
 
 const FinancelloPreset = definePreset(Aura, {
-  semantic: {
-    primary: {
-      50: '#eff6ff',
-      100: '#dbeafe',
-      200: '#bfdbfe',
-      300: '#93c5fd',
-      400: '#60a5fa',
-      500: '#3b82f6', // Azul bem visível
-      600: '#2563eb',
-      700: '#1d4ed8',
-      800: '#1e40af',
-      900: '#1e3a8a',
-      950: '#172554'
-    },
-    surface:{
-      0:'#3b82f6',
-      50:"#eff6ff",
-      100:'#3b82f6'
-    },
-    text: {
-          color: '#1f2937'         // Texto escuro (legível no fundo branco)
-        }
+    // A seção SEMANTIC define os tokens GERAIS para o app
 
-  }
+     primitive: {
+        ...Aura.primitive, // Copiamos as cores base do Aura
+
+        // Criamos nossa própria paleta de cores da marca
+        minhasCores: {
+            laranjaPrincipal: '#f59e0b',
+            laranjaHover: '#d97706',
+            fundoComponente: '#34D399' // O fundo escuro que você queria
+        }
+    },
+
+    semantic: {
+         ...(Aura.semantic?.primary || {}),
+
+        // Sua paleta de cor primária (laranja/âmbar)
+        primary: {
+          color:'{minhasCores.laranjaPrincipal}',
+           hover: {
+                ...(Aura.semantic?.primary?.hover || {}),
+                color: '{minhasCores.laranjaHover}'
+            },
+
+
+            // ... (outros tons se precisar)
+        },
+
+        // Sua cor GERAL para fundos de componentes
+        surface: {
+            ...(Aura.semantic?.surface || {}),
+            card: '{minhasCores.fundoComponente}' // Um cinza escuro
+        }
+    },
+
+    // AQUI ESTÁ A CORREÇÃO ESPECÍFICA PARA A GALERIA
+    galleria: {
+        // Copiamos as definições base da Galleria do Aura
+        ...(Aura.galleria || {}),
+
+        // Navegamos até a parte de miniaturas (thumbnail)
+        thumbnail: {
+            ...(Aura.galleria?.thumbnail || {}),
+
+            // E dentro dela, o container que tem o fundo preto
+            container: {
+                ...(Aura.galleria?.thumbnail?.container || {}),
+
+                // AQUI ESTÁ A MÁGICA:
+                // Dizemos para o fundo do container de miniaturas usar a
+                // mesma cor que definimos para o nosso 'surface.card' geral.
+                background: 'transparent'
+            }
+        }
+    }
 });
 
 export default FinancelloPreset;
+

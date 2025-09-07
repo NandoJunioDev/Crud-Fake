@@ -8,11 +8,21 @@
    Isso remove o fundo branco dos componentes. */
 
 body{
-  background-color: rgb(73, 111, 144);
+  background-color:#1e293b ;
+  color:#f8fafc ;
+}
+.p-galleria-thumbnail-container,
+.p-galleria-thumbnails,
+.p-galleria-thumbnails-content {
+  background-color: transparent !important;
 }
 
-/* Para PrimeVue 4 com data attributes */
+/* Se for a área toda da galleria */
+.p-galleria-thumbnails-container {
+  background-color: #F29E6D !important;
+}
 
+/* Se for a área toda da galleria */
 
 
 
